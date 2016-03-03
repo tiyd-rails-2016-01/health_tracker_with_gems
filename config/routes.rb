@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :performed_exercises
+  resources :exercise_performeds
   root 'weight#show'
   get 'weight/show'
 
