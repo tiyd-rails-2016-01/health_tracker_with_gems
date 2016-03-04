@@ -1,13 +1,21 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Performed Exercises</h1>
+<h1>Exercise Tracking</h1>
 
 <table>
   <thead>
     <tr>
       <th>Exercise</th>
-      <th>Duration</th>
+      <th>Duration </th>
       <th>Calories burned</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>(in mins.)</th>
+      <th></th>
+      <th></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +23,10 @@
   <tbody>
     <% @performed_exercises.each do |performed_exercise| %>
       <tr>
-        <td><%= performed_exercise.exercise %></td>
+        <td><%= ExerciseType.where(id: performed_exercise.exercise_type_id).first.name %></td>
         <td><%= performed_exercise.duration %></td>
         <td><%= performed_exercise.calories_burned %></td>
+        <td><%= performed_exercise.done_on %></td>
         <td><%= link_to 'Show', performed_exercise %></td>
         <td><%= link_to 'Edit', edit_performed_exercise_path(performed_exercise) %></td>
         <td><%= link_to 'Destroy', performed_exercise, method: :delete, data: { confirm: 'Are you sure?' } %></td>

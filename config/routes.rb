@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   resources :performed_exercises
-  resources :exercise_performeds
-  root 'weight#show'
-  get 'weight/show'
-
-  get 'weight/create'
-
   resources :weights
+
+  root 'weight#show'
+  # get 'weight/show'
+  # get 'weight/create'
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
