@@ -1,10 +1,8 @@
 Rails.application.routes.draw do
-  resources :performed_exercises
+  root 'dashboard#index'
   resources :weights
+  resources :performed_exercises
 
-  root 'weights#index'
-  # get 'weight/show'
-  # get 'weight/create'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
