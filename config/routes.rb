@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  get 'weights/dashboard'
-
-  resources :performed_exercises
+  root 'dashboard#index'
   resources :weights
+  resources :performed_exercises
+  
   # root 'weight#dashboard'
 
 

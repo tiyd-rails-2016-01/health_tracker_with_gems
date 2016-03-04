@@ -11,3 +11,20 @@
   20.times do
   Weight.create(number: rand(75...325), weigh_date_on: w_dates.sample)
   end
+
+
+  ExerciseType.create(name: "Run")
+    ExerciseType.create(name: "Bike Ride")
+    ExerciseType.create(name: "Trail Hike")
+    ExerciseType.create(name: "Mountain Climbing")
+    ExerciseType.create(name: "Skiing")
+    ExerciseType.create(name: "P90X: Core Synergistics")
+    ExerciseType.create(name: "Dog Walk")
+    exercises = ExerciseType.pluck(:exercise)
+    e_dates = ["2016-03-01", "2016-02-29", "2016-03-02", "2016-02-27"]
+    1..15.times do |x|
+      PerformedExercise.create(exercise: exercises.sample,
+                                duration: rand(100)+1,
+                                calories_burned: rand(50...1000)
+      )
+    end

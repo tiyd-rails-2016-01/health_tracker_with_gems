@@ -1,11 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   exercise: MyString
   duration: 1
   calories_burned: 1
 
 two:
+  id: 2
   exercise: MyString
   duration: 1
   calories_burned: 1
