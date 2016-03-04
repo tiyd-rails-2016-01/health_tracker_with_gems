@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :performed_exercises
   resources :weights
 
-  root 'weight#show'
+  root 'weights#index'
   # get 'weight/show'
   # get 'weight/create'
 

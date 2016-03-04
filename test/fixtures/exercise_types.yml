@@ -1,10 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: Run
 
 two:
+  id: 2
   name: Bike Ride
 
 three:
+  id: 3
   name: Trail Hike
