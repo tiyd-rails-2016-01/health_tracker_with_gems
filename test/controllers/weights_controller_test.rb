@@ -16,6 +16,11 @@ class WeightsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
+  test "should get dashboard" do
+    get :dashboard
+    assert_response :success
+  end
+
   test "should create weight" do
     assert_difference('Weight.count') do
       post :create, weight: { number: @weight.number, weigh_date_on: @weight.weigh_date_on }

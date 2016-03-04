@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Exercise-Weight Journal</h1>
+
+<p>
+  <strong>Latest Weight</strong>
+  <%= @weights.count =%>
+  <br>
+  <%= link_to 'See Weight Tracking', weights_path %>
+
+</p>
+
+<br>
+
+<%= link_to 'New Weight', new_weight_path %>

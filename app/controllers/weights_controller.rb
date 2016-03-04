@@ -4,7 +4,7 @@ class WeightsController < ApplicationController
   # GET /weights
   # GET /weights.json
   def index
-    @weights = Weight.all
+    @weights = Weight.all.order(weigh_date_on: :desc)
   end
 
   # GET /weights/1
@@ -17,6 +17,9 @@ class WeightsController < ApplicationController
     @weight = Weight.new
   end
 
+  def dashboard
+    @weights = Weight.all
+  end
   # GET /weights/1/edit
   def edit
   end
