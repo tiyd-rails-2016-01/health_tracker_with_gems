@@ -1,9 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  number: 1.5
+  number: 200
   weigh_date_on: 2016-03-03
 
 two:
-  number: 1.5
+  number: 175
+  weigh_date_on: 2016-03-02
+
+three:
+  number: 100
   weigh_date_on: 2016-03-03
+
+four:
+  number: 97
+  weigh_date_on: 2016-03-02
+
+five:
+  number: 154
+  weigh_date_on: 2016-03-03
+
+six:
+  number: 120
+  weigh_date_on: 2016-03-02
