@@ -19,6 +19,8 @@
   <strong>All-Time Calories Consumed</strong>
   <%= ConsumedCalory.all.sum(:total) %>
   <br>
+  <%= link_to 'See Calorie Journal', consumed_calories_path %>
+  <br>
 </p>
 
 <p>

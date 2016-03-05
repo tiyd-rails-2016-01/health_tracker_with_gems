@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   resources :weights
   resources :performed_exercises
+  resources :consumed_calories
 
 
 

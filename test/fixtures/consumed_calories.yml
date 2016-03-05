@@ -2,10 +2,10 @@
 
 one:
   id: 1
-  total: 1
+  total: 3000
   consumed_on: 2016-03-03
 
 two:
   id: 2
-  total: 1
-  consumed_on: 2016-03-03
+  total: 2000
+  consumed_on: 2016-03-02
