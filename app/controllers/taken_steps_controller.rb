@@ -56,7 +56,7 @@ class TakenStepsController < ApplicationController
   def destroy
     @taken_step.destroy
     respond_to do |format|
-      format.html { redirect_to weights_url, notice: 'steps taken was successfully destroyed.' }
+      format.html { redirect_to taken_steps_url, notice: 'steps taken was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
