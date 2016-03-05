@@ -17,8 +17,10 @@
 </p>
 
 <p>
-  <strong>All-Time Calories Consumed</strong>
-  <%= ConsumedCalory.all.sum(:total) %>
+  <strong>Net Calories Yesterday</strong>
+  <%= ConsumedCalory.get_net_calories(Date.yesterday) %>
+  <br>
+  <%= link_to 'See Calorie Journal', consumed_calories_path %>
   <br>
 </p>
 

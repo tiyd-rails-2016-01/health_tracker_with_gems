@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Calorie Consumption Journal</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Calories</th>
+      <th>Date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @calories.each do |c| %>
+      <tr>
+        <td><%= c.total %></td>
+        <td><%= c.consumed_on %></td>
+        <td><%= link_to 'Show', c %></td>
+        <td><%= link_to 'Edit', edit_consumed_calory_path(c) %></td>
+        <td><%= link_to 'Destroy', c, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Calorie Entry', new_consumed_calory_path %> | <%= link_to 'Dashboard', root_path %>
