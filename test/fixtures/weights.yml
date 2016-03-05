@@ -13,19 +13,19 @@ two:
 three:
   id: 3
   number: 100
-  weigh_date_on: 2016-03-03
+  weigh_date_on: 2016-03-04
 
 four:
   id: 4
   number: 97
-  weigh_date_on: 2016-03-02
+  weigh_date_on: 2016-03-05
 
 five:
   id: 5
   number: 154
-  weigh_date_on: 2016-03-03
+  weigh_date_on: 2016-03-06
 
 six:
   id: 6
   number: 120
-  weigh_date_on: 2016-03-02
+  weigh_date_on: 2016-03-07

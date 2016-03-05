@@ -16,22 +16,19 @@
   ExerciseType.create(name: "Dog Walk")
 
   exercises = ExerciseType.pluck(:id)
-  e_dates = ["2016-03-01", "2016-02-29", "2016-03-02", "2016-02-27"]
 
-  1..15.times do
+  20.times do |x|
     PerformedExercise.create(exercise_type_id: exercises.sample,
-                              duration: rand(100)+1,
-                              calories_burned: rand(50...1000),
-                              done_on: e_dates.sample
+                            duration: rand(100)+1,
+                            calories_burned: rand(50...1000),
+                            done_on: "2016-03-#{x+1}"
     )
   end
 
-  w_dates = ["2016-03-01", "2016-02-29", "2016-03-02", "2016-02-27"]
-  20.times do
-  Weight.create(number: rand(75...325), weigh_date_on: w_dates.sample)
+  20.times do |x|
+    Weight.create(number: rand(75...325), weigh_date_on: "2016-03-#{x+1}")
   end
 
-  ts_dates = ["2016-03-01", "2016-02-29", "2016-03-02", "2016-02-27"]
-  20.times do
-  TakenStep.create(count: rand(1000...10000), done_on: ts_dates.sample)
+  20.times do |x|
+    TakenStep.create(count: rand(1000...10000), done_on: "2016-03-#{x+1}")
   end

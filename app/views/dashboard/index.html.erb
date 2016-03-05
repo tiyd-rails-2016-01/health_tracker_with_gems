@@ -6,21 +6,17 @@
   <strong>Latest Weight</strong>
   <%= Weight.all.order(weigh_date_on: :desc).first.number %>
   <br>
-  <%= link_to 'See Weight Journal', weights_path %>
 </p>
 
 <p>
   <strong>All-Time Steps Taken</strong>
   <%= TakenStep.all.sum(:count) %>
   <br>
-  <%= link_to 'See Step Journal', taken_steps_path %>
 </p>
 
 <p>
   <strong>Net Calories Yesterday</strong>
   <%= ConsumedCalory.get_net_calories(Date.yesterday) %>
-  <br>
-  <%= link_to 'See Calorie Journal', consumed_calories_path %>
   <br>
 </p>
 
@@ -29,9 +25,10 @@
   <%e = PerformedExercise.all.order(created_at: :desc).first%>
   <%= "#{e.exercise} for #{e.duration} minutes" %>
   <br>
-  <%= link_to 'See Exercise Journal', performed_exercises_path %>
 </p>
-
 <br>
 
-<%= link_to 'New Weight', new_weight_path %>
+<%= link_to 'See Weight Journal', weights_path %> |
+<%= link_to 'See Exercise Journal', performed_exercises_path %> |
+<%= link_to 'See Calorie Journal', consumed_calories_path %> |
+<%= link_to 'See Step Journal', taken_steps_path %>
