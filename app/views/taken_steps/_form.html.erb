@@ -1,0 +1,25 @@
+<%= form_for(@taken_step) do |f| %>
+  <% if @taken_step.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@taken_step.errors.count, "error") %> prohibited this steps taken from being saved:</h2>
+
+      <ul>
+      <% @taken_step.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :count %><br>
+    <%= f.text_field :count %>
+  </div>
+  <div class="field">
+    <%= f.label :done_on %><br>
+    <%= f.date_select :done_on %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'dashboard#index'
   resources :weights
   resources :performed_exercises
-
+  resources :taken_steps
 
 
   # The priority is based upon order of creation: first created -> highest priority.
