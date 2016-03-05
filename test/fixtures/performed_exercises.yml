@@ -5,15 +5,18 @@ one:
   exercise_type_id: 1
   duration: 35
   calories_burned: 400
+  done_on: "2016-03-04"
 
 two:
   id: 2
   exercise_type_id: 2
   duration: 60
   calories_burned: 732
+  done_on: "2016-03-03"
 
 three:
   id: 3
   exercise_type_id: 3
   duration: 45
   calories_burned: 430
+  done_on: "2016-03-03"
