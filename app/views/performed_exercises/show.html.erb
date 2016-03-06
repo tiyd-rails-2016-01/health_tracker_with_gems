@@ -2,7 +2,7 @@
 
 <p>
   <strong>Exercise:</strong>
-  <%= @performed_exercise.exercise %>
+  <%= ExerciseType.where(id: @performed_exercise.exercise_type_id).first.name %>
 </p>
 
 <p>
@@ -13,6 +13,11 @@
 <p>
   <strong>Calories burned:</strong>
   <%= @performed_exercise.calories_burned %>
+</p>
+
+<p>
+  <strong>Done on:</strong>
+  <%= @performed_exercise.done_on %>
 </p>
 
 <%= link_to 'Edit', edit_performed_exercise_path(@performed_exercise) %> |

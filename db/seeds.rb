@@ -23,12 +23,14 @@
                             calories_burned: rand(50...1000),
                             done_on: "2016-03-#{x+1}"
     )
-  end
-
-  20.times do |x|
+    PerformedExercise.create(exercise_type_id: exercises.sample,
+                            duration: rand(100)+1,
+                            calories_burned: rand(50...1000),
+                            done_on: "2016-03-#{x+1}"
+    )
     Weight.create(number: rand(75...325), weigh_date_on: "2016-03-#{x+1}")
-  end
-
-  20.times do |x|
     TakenStep.create(count: rand(1000...10000), done_on: "2016-03-#{x+1}")
-  end
+    TakenStep.create(count: rand(1000...10000), done_on: "2016-03-#{x+1}")
+    ConsumedCalory.create(total: rand(2...3000), consumed_on: "2016-03-#{x+1}")
+    ConsumedCalory.create(total: rand(2...3000), consumed_on: "2016-03-#{x+1}")
+end
