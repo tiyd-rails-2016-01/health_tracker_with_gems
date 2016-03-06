@@ -9,6 +9,12 @@
 </p>
 
 <p>
+  <strong>Average Weight</strong>
+  <%= Weight.all.average(:number) %>
+  <br>
+</p>
+
+<p>
   <strong>All-Time Steps Taken</strong>
   <%= TakenStep.all.sum(:count) %>
   <br>
