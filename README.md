@@ -19,12 +19,12 @@ An application to store information on your weight (measured once per day), dail
 **ERB link**
 
 [Our lucidchart]
-(https://www.lucidchart.com/invitations/accept/b7915751-1c8a-43c6-8f6c-a1cdd6d50640 / Visit our lucidchart)
+(https://www.lucidchart.com/invitations/accept/b7915751-1c8a-43c6-8f6c-a1cdd6d50640)
 
 **Heroku Link**
 
 [Our Heroku application link]
-(https://still-refuge-25407.herokuapp.com / Start HeathTracker)
+(https://still-refuge-25407.herokuapp.com)
 
 **Health Tracker Features**
 
