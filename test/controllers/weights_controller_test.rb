@@ -43,6 +43,8 @@ class WeightsControllerTest < ActionController::TestCase
       delete :destroy, id: @weight
     end
 
+
+
     assert_redirected_to weights_path
   end
 end

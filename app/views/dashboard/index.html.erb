@@ -15,8 +15,8 @@
 </p>
 
 <p>
-  <strong>All-Time Steps Taken</strong>
-  <%= TakenStep.all.sum(:count) %>
+  <strong>Average Steps</strong>
+  <%= TakenStep.all.average(:count) %>
   <br>
 </p>
 
