@@ -69,6 +69,6 @@ class PerformedExercisesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def performed_exercise_params
-      params.require(:performed_exercise).permit(:exercise, :duration, :calories_burned)
+      params.require(:performed_exercise).permit(:exercise_type_id, :duration, :calories_burned, :done_on)
     end
 end

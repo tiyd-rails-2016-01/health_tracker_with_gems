@@ -15,10 +15,21 @@
 </p>
 
 <p>
-  <strong>All-Time Steps Taken</strong>
-  <%= TakenStep.all.sum(:count) %>
+  <strong>Average Steps Taken</strong>
+  <%= TakenStep.all.average(:count) %>
   <br>
 </p>
+
+<p>
+  <strong>Past 3 Days Workout</strong>
+  <% exercises = PerformedExercise.past_3_days %>
+  <ul>
+    <% exercises.each do |e| %>
+    <li> <%=ExerciseType.where(id: e.exercise_type_id).first.name%> burned <%=e.calories_burned%> calories on <%=e.done_on%></li>
+    <%end%>
+  </ul>
+</p>
+
 
 <p>
   <strong>Net Calories Yesterday</strong>
@@ -29,10 +40,11 @@
 <p>
   <strong>Latest Exercise Entry</strong>
   <%e = PerformedExercise.all.order(created_at: :desc).first%>
-  <%= "#{e.exercise} for #{e.duration} minutes" %>
+  <%= "#{ExerciseType.where(id: e.exercise_type_id).first.name} for #{e.duration} minutes" %>
   <br>
 </p>
 <br>
+
 
 <%= link_to 'See Weight Journal', weights_path %> |
 <%= link_to 'See Exercise Journal', performed_exercises_path %> |

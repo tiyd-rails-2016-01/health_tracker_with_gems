@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class PerformedExerciseTest < ActiveSupport::TestCase
-  test "test weekly activity" do
-    assert PerformedExercise.weekly_activity.length > 1
+  test "test past_3_days" do
+    assert PerformedExercise.past_3_days.length >= 1
   end
 end

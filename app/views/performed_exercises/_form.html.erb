@@ -12,23 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :exercise %><br>
-    <%= f.text_field :exercise %><br>
-
-    <!-- < f.select(ExerciseType.name:) do %>
-
-        < content(option:, "Run", value:, 1) %> -->
-    <!--  end %> -->
-
+    <%= f.label :exercise_type_id %>
+    <%= f.collection_select(:exercise_type_id, ExerciseType.all, :id, :name) %>
   </div>
+
   <div class="field">
     <%= f.label :duration %><br>
     <%= f.number_field :duration %>
   </div>
-  <!-- <div class="field">
+
+  <div class="field">
     <%= f.label :calories_burned %><br>
     <%= f.number_field :calories_burned %>
-  </div> -->
+  </div>
+
+  <div class="field">
+    <%= f.label :done_on %><br>
+    <%= f.date_field :done_on %>
+  </div>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
