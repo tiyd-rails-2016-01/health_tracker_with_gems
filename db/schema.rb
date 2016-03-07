@@ -20,6 +20,13 @@ ActiveRecord::Schema.define(version: 20160303223556) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "exercise_performeds", force: :cascade do |t|
+    t.string   "exercise"
+    t.integer  "duration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "exercise_types", force: :cascade do |t|
     t.string   "name"
     t.datetime "created_at", null: false

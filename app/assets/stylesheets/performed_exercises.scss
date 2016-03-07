@@ -1,3 +1,23 @@
 // Place all the styles related to the PerformedExercises controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$main-color: pink;
+
+img {
+  border: 1px solid $main-color;
+  &#richard {
+    width: 400px;
+  }
+}
+
+h1 {
+  color: $main-color;
+}
+
+ul {
+  color: $main-color;
+  .bold {
+    font-weight: bold;
+  }
+}

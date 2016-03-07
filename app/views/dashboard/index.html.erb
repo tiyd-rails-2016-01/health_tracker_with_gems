@@ -2,51 +2,60 @@
 
 <h1>My Exercise-Weight Journal</h1>
 
-<p>
-  <strong>Latest Weight</strong>
-  <%= Weight.all.order(weigh_date_on: :desc).first.number %>
-  <br>
-</p>
+<div class="row">
+  <div class="col-md-6 col-lg-3">
+    <%= image_tag asset_url("richard.jpg"), id: "richard" %>
+  </div>
+  <div class="col-md-6 col-lg-9">
 
-<p>
-  <strong>Average Weight</strong>
-  <%= Weight.all.average(:number) %>
-  <br>
-</p>
+    <p>
+      <strong class="btn btn-default">Latest Weight</strong>
+      <%= Weight.all.order(weigh_date_on: :desc).first.number %>
+      <br>
+    </p>
 
-<p>
-  <strong>Average Steps</strong>
-  <%= TakenStep.all.average(:count) %>
-  <br>
-</p>
+    <p>
+      <strong>Average Weight</strong>
+      <%= Weight.all.average(:number) %>
+      <br>
+    </p>
 
-<p>
-  <strong>Past 3 Days Workout</strong>
-  <% exercises = PerformedExercise.past_3_days %>
-  <ul>
-    <% exercises.each do |e| %>
-    <li> <%=ExerciseType.where(id: e.exercise_type_id).first.name%> burned <%=e.calories_burned%> calories on <%=e.done_on%></li>
-    <%end%>
-  </ul>
-</p>
+    <p>
+      <strong>Average Steps</strong>
+      <%= TakenStep.all.average(:count) %>
+      <br>
+    </p>
 
-
-<p>
-  <strong>Net Calories Yesterday</strong>
-  <%= ConsumedCalory.get_net_calories(Date.yesterday) %>
-  <br>
-</p>
-
-<p>
-  <strong>Latest Exercise Entry</strong>
-  <%e = PerformedExercise.all.order(done_on: :desc).first%>
-  <%= "#{ExerciseType.where(id: e.exercise_type_id).first.name} for #{e.duration} minutes on #{e.done_on}" %>
-  <br>
-</p>
-<br>
+    <p>
+      <strong>Past 3 Days Workout</strong>
+      <% exercises = PerformedExercise.past_3_days %>
+      <ul>
+        <% exercises.each do |e| %>
+          <li> <%=ExerciseType.where(id: e.exercise_type_id).first.name%> burned <%=e.calories_burned%> calories on <%=e.done_on%></li>
+        <%end%>
+        <li class="bold">Whatever you do, don't eat the mint brownies.</li>
+      </ul>
+    </p>
 
 
-<%= link_to 'See Weight Journal', weights_path %> |
-<%= link_to 'See Exercise Journal', performed_exercises_path %> |
-<%= link_to 'See Calorie Journal', consumed_calories_path %> |
-<%= link_to 'See Step Journal', taken_steps_path %>
+    <p>
+      <strong>Net Calories Yesterday</strong>
+      <%= ConsumedCalory.get_net_calories(Date.yesterday) %>
+      <br>
+    </p>
+
+    <p>
+      <strong>Latest Exercise Entry</strong>
+      <%e = PerformedExercise.all.order(done_on: :desc).first%>
+      <%= "#{ExerciseType.where(id: e.exercise_type_id).first.name} for #{e.duration} minutes on #{e.done_on}" %>
+      <br>
+    </p>
+    <br>
+  </div>
+</div>
+
+
+<%= link_to 'See Weight Journal', admin_weights_path %> |
+<%= link_to 'See Exercise Journal', admin_performed_exercises_path %> |
+<%= link_to 'See Calorie Journal', admin_consumed_calories_path %> |
+<%= link_to 'See Step Journal', admin_taken_steps_path %>

@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :consumed_calories
+resources :exercise_performeds
+resources :exercise_types
+resources :performed_exercises
+resources :taken_steps
+resources :weights
+
+    root to: "consumed_calories#index"
+  end
+
   root 'dashboard#index'
   resources :weights
   resources :performed_exercises
